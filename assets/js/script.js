@@ -71,6 +71,6 @@ $(selector).bind('click', function () {
             spinner.remove();
 			 $('#loading').hide();
 			
-        });
+        }
     });
 });

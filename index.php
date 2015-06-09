@@ -17,7 +17,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=BlackOpsOne|Playball|RobotoSlab">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<style>
+#demo1 {
+	color:white;
+}
 </head>
+</style>
   <body>
   <div class="container">
   <!-- Static navbar -->
@@ -94,8 +99,8 @@
 <span class="glyphicon glyphicon-asterisk form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div> 
 <div class="row"><div class="col-xs-12">
- <input type="submit"  id= "followbtn" class="btn btn-success btn-md" value="Create Account" onclick="$('#loading').show();" >
-<div id="loading" style="display:none;"><img src='assets/images/pre.gif' height="50px" width="50px"/></div>>
+ <input type="submit"  id= "followbtn" class="btn btn-success btn-md" value="Create Account" onclick="$('#loading').show();"/>
+<div id="loading" style="display:none;"><img src='assets/images/pre.gif' height="50px" width="50px"/></div>
         </form>
 		</div>
   </div>
