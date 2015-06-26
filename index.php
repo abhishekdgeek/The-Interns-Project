@@ -32,22 +32,22 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
                        <ul class="nav navbar-nav navbar-right">
-                  <!--sign in section-->
+             			<!--sign in section-->
 <li>
  <form  name= "n2" action="signin1.php" method= "post">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label">E-Mail</label>
-<input type="email" name= "email" class="form-control" required  placeholder="Enter a valid e-mail address">
+<label for="element-1" class="control-label" style="color:white">E-Mail</label>
+<input type="email" name= "email" class="form-control" required>
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></li>
 <li>
 <div class="form-group has-warning has-feedback">
-<label for="element-2" class="control-label">Password</label>
-<input type="password"  name= "password"  class="form-control"  required  placeholder="Enter your password">
+<label for="element-2" class="control-label" style="color:white">Password</label>
+<input type="password"  name= "password"  class="form-control"  required>
 <span class="glyphicon glyphicon-asterisk form-control-feedback"></span>
 </div>
 </li>
-<li><div class="btn-toolbar "> <input type="submit" value="Sign in" class="btn btn-primary btn-md"></div></form>
+<li><div class="btn-toolbar "><input type="submit" value="Sign in" class="btn btn-primary btn-md"></div></form>
 <!-- controls grid system maintaining gap between columns-->
 </li>
  </ul>
@@ -57,45 +57,40 @@
       <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
  <div class="row">
-   <div class="col-xs-12 col-md-6">
+	 <div class="col-xs-12 col-md-6">
        <img src="assets/images/back1.jpg" class="img-responsive" alt="SOCIAL"></div>
-         <div class="col-xs-12 col-md-6">
-     <div class="row">
-     <div class="panel panel-default">
+         <div class="col-xs-12 col-md-6" id="second">
+		 <div class="row">
+		 <div class="panel panel-default">
     <div class="panel-heading">Sign Up</div>
     <div class="panel-body">
-  <form class="register" name= "n1"  method="post" id= "followform" action="signup1.php">
-  <div class="row"><div class="col-xs-12">
+	<form class="register" name= "n1"  method="post" id= "followform" action="signup1.php">
+	<div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label">First Name</label>
-<input type="text" class="form-control"  required   name="fname" id="fname" placeholder="Enter your First name">
+<input type="text" class="form-control"  required   name="fname" id="fname" placeholder="First name">
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>  
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label">Last Name</label>
-<input type="text" class="form-control"  required    name="lname" id="lname" placeholder="Enter your Last name">
+<input type="text" class="form-control"  required    name="lname" id="lname" placeholder="Last name">
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>    
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label">E-Mail</label>
- <input type="email" class="form-control"    required name="email" id="email"  placeholder="Enter your Email id">
+ <input type="email" class="form-control"    required name="email" id="email"  placeholder="Enter Email">
 <span class="glyphicon glyphicon-envelope form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label">Password</label>
   <input type="password" class="form-control"    required name="password" id="password" placeholder="Password" >
 <span class="glyphicon glyphicon-asterisk form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div> 
 <div class="row"><div class="col-xs-12">
  <input type="submit"  id= "followbtn" class="btn btn-success btn-md" value="Create Account">
         </form>
-    </div>
+		</div>
   </div>
 </div></div></div></div></div></div>
-
   <!-- /container -->
  <!-- Bootstrap core JavaScript
     ================================================== -->
