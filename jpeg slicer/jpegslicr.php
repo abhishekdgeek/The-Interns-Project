@@ -1,14 +1,5 @@
 <?php 
-/*<------------------------------------ 
-    
-    FILE = JPEGSlicer.php 
-    TYPE = PHP CLASS 
-    AUTHOR = ANISH KARIM C, <thecoderin@aol.in> 
-    DATE = 20 Jan 2008 
-    
-    DESCRIPTION : JPEGSlicer is a JPEG image resizer-Slicer class written in pure php. 
-    Whcich is used to resize and slice the entire image into 4 sub parts and this will be help to load the imge faster in the post upload section. 
--------------------------------------->*/ 
+
 
 
 class JPEGSlicer 
@@ -111,11 +102,12 @@ class JPEGSlicer
                 imagedestroy($new_img); 
                 imagedestroy($cut_image); 
                 $init_x = $init_x+ $split_width; 
-                
-            
         
         } 
 
     } 
 } 
+  
+
+
 ?> 
