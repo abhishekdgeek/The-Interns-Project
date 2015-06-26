@@ -8,7 +8,7 @@
 <body> 
 <form method="post" name="post_form" enctype="multipart/form-data" action="uploaded_example.php"> 
 <input type="hidden" name="MAX_FILE_SIZE" value="1000000" /> 
-<input type="file" name="image" /> 
+<input type="file" name="image1" /> 
 <input type="submit" name="submit" value="Upoad" /> 
 </form> 
 </body> 
