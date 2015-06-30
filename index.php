@@ -10,11 +10,13 @@
 <link rel="icon" sizes="144x144" type="image/png" href="assets/images/fav.png">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
 <!-- Optional theme -->
 <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=BlackOpsOne|Playball|RobotoSlab">
 <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+<script src="assets/js/home.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.1/jquery.form-validator.min.js"></script>
+<script> $.validate(); </script>
 </head>
   <body>
   <div class="container">
@@ -36,14 +38,12 @@
 <li>
  <form  name= "n2" action="signin1.php" method= "post">
 <div class="form-group has-warning has-feedback">
-<label for="element-1" class="control-label" style="color:white">E-Mail</label>
-<input type="email" name= "email" class="form-control" required>
+<input type="email" name= "email" class="form-control" data-validation="email" placeholder="Email">
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></li>
 <li>
 <div class="form-group has-warning has-feedback">
-<label for="element-2" class="control-label" style="color:white">Password</label>
-<input type="password"  name= "password"  class="form-control"  required>
+<input type="password"  name= "password"  class="form-control" placeholder="Password" data-validation="length" data-validation-length="min10">
 <span class="glyphicon glyphicon-asterisk form-control-feedback"></span>
 </div>
 </li>
@@ -51,10 +51,9 @@
 <!-- controls grid system maintaining gap between columns-->
 </li>
  </ul>
-          </div><!--/.nav-collapse -->
+  </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav> </div>
-      <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
  <div class="row">
 	 <div class="col-xs-12 col-md-6">
@@ -67,22 +66,22 @@
 	<form class="register" name= "n1"  method="post" id= "followform" action="signup1.php">
 	<div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<input type="text" class="form-control"  required   name="fname" id="fname" placeholder="First name">
+<input type="text" class="form-control"   name="fname" id="fname" placeholder="First name">
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>  
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-<input type="text" class="form-control"  required    name="lname" id="lname" placeholder="Last name">
+<input type="text" class="form-control"  name="lname" id="lname" placeholder="Last name">
 <span class="glyphicon glyphicon-user form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>    
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
- <input type="email" class="form-control"    required name="email" id="email"  placeholder="Enter Email">
+ <input type="email" class="form-control" name="email" id="email"  placeholder="Enter Email">
 <span class="glyphicon glyphicon-envelope form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div>
 <div class="row"><div class="col-xs-12">
 <div class="form-group has-warning has-feedback">
-  <input type="password" class="form-control"    required name="password" id="password" placeholder="Password" >
+  <input type="password" class="form-control"  name="password" id="password" placeholder="Password" >
 <span class="glyphicon glyphicon-asterisk form-control-feedback"></span><!-- with form control feedback glyphicon inside the textfields-->
 </div></div></div> 
 <div class="row"><div class="col-xs-12">
@@ -91,13 +90,9 @@
 		</div>
   </div>
 </div></div></div></div></div></div>
-  <!-- /container -->
- <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
  <script src="assets/js/jquery-2.1.1.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/validate.js"></script>
   </body>
 </html>
