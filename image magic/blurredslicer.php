@@ -1,6 +1,7 @@
 
 <?php
-//code for blurred image
+//code for blurred image..
+/* input is original image..it will first blur the image and and then slice the image and store the sliced parts in the folder blurred images */
 class JPEGSlicer1 
 { 
     function JPEGSlicer1($directory, $temp_image1,$selection,$t,$resize) 
@@ -55,7 +56,7 @@ class JPEGSlicer1
         $this->filename = array(); 
         $full_width = $this->image_info[0]; 
         $full_height = $this->image_info[1]; 
-        echo"<br>".$width." ".$height; 
+       // echo"<br>".$width." ".$height; 
         $split_width = round($width/4); 
         $split_height = round($height/4); 
 	

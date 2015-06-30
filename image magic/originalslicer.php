@@ -1,5 +1,6 @@
 <?php 
-
+//code for original image..
+/* input is original image..it will slice the image and store the sliced parts in the folder original images */
 class JPEGSlicer 
 { 
     function JPEGSlicer($directory, $temp_image,$selection,$t,$resize) 
