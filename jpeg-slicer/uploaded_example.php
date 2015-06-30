@@ -4,10 +4,22 @@ thecoderin@aol.in
 --> 
 <?php 
 include("jpegslicr.php"); 
+include("blurredslicr.php");
+include('connection.php');
 echo"FILE PROPERTIES<br><pre>"; 
 print_r($_FILES); 
 echo"</pre>"; 
 $image = $_FILES['image']['tmp_name']; 
+$image1= $_FILES['image']['name'];
+$email=$_POST['email'];
+$sql= "INSERT into user_info (email,img_name) VALUES('.$email.','.$image1.')";
+
+           if (!mysql_query($sql))
+                       { 
+                //die('Error: ' . mysql_error());
+
+		    echo "there is some error in image"	;
+		}
 ?> 
 
 
@@ -23,28 +35,9 @@ $image = $_FILES['image']['tmp_name'];
 <body> 
 
 <?php 
-//JPEGSlicer(directory, temp_image,selection,resize) 
-    /* 
-        -->directory = directory name to be uploaded (string) 
-        
-        -->temp_image = The temporary image file example: $_FILES['image']['tmp_name'] (string) 
-        
-        -->selection = The selection for resize (dtring) 
-            ->if selection = 'height' 
-                the image is resized , ie. new image height will be resize value of the function parameter 
-            ->if selection = 'width' 
-                the image is resized , ie. new image width will be resize value of the function parameter 
-            ->if selection ='nill' 
-                NO IMAGE RESIZE PLEASE ASSIGN resize = 0 
-                
-        -->resize = value assigned to the fixed selection (integer) 
-            resize will be zero if the selection goes to zero 
-            
-            
-            THE IMAGES WILL BE IN THE object->filename ARRAY 
-    */ 
 
-$ImgObject = new JPEGSlicer('slice', $image,'nill',0); //JPEG SLICE WITHOUT RESIZE 
+$ImgObject = new JPEGSlicer('slice', $image,'nill',0);
+$ImgObject1 = new JPEGSlicer1('slice', $image,'nill',0); //JPEG SLICE WITHOUT RESIZE 
 //$ImgObject = new JPEGSlicer('slice', $image,'width',100); //JPEG SLICE WITH RESIZE ACCORDING TO WIDTH SIZE = 100px 
 //$ImgObject = new JPEGSlicer('slice', $image,'height',100); //JPEG SLICE WITH RESIZE ACCORDING TO HEIGHT SIZE = 100px 
 ?> 
@@ -61,13 +54,24 @@ $ImgObject = new JPEGSlicer('slice', $image,'nill',0); //JPEG SLICE WITHOUT RESI
 <tr> 
 <?php for($i=0;$i<16;$i++) 
     { 
+$x=1;
     ?> 
-<td><img src="<?php echo $ImgObject->filename[$i]; ?>" /></td> 
-<?php if((($i)%3))
-        { 
-    ?> 
+<td><img src="<?php echo $ImgObject1->filename[$i]; ?>" /></td> 
+<?php  if(($i)==((3*$x)+($x-1)))
+       { 
+           $x=$x+1;
+   ?> 
+   
 </tr><tr> 
 <?php } 
+      $sql1= "INSERT into img_table (org_img,blur_img) VALUES('".$ImgObject->filename[$i]."','".$ImgObject1->filename[$i]."')";
+
+           if (!mysql_query($sql1))
+                       { 
+                //die('Error: ' . mysql_error());
+
+		echo "there is some error in image"	;
+		              }
     } 
 ?> 
 </tr> 

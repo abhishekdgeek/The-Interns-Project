@@ -5,8 +5,8 @@ thecoderin@aol.in
 <?php 
 // Report all errors except E_NOTICE   
 error_reporting(E_ALL ^ E_NOTICE);
-include("jpegslicer.php"); 
-include('connect.php');
+include("jpegslicr.php"); 
+//include('connect.php');
 //echo"FILE PROPERTIES<br><pre>"; 
 //print_r($_FILES); 
 //echo"</pre>"; 
