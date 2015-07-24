@@ -34,7 +34,7 @@ class JPEGSlicer
 		@mkdir("$directory/$t",0777); 
         @mkdir("$directory/$t".'/original_images',0777); 
 		//$divisons=$_POST['parts'];
-		for($j=0;$j<16;$j++)
+		for($j=0;$j<400;$j++)
 		{
         $path[$j] = "$directory/$t".'/original_images/'; 
 		}
@@ -48,18 +48,18 @@ class JPEGSlicer
         $full_width = $this->image_info[0]; 
         $full_height = $this->image_info[1]; 
        // echo"<br>".$width." ".$height; 
-        $split_width = round($width/4); 
-        $split_height = round($height/4); 
+        $split_width = round($width/20); 
+        $split_height = round($height/20); 
 	
         $test = 0;
-        for($i=0;$i<16;$i++) 
+        for($i=0;$i<400;$i++) 
         { 
             
             $new_img = imagecreatetruecolor($width,$height); 
             $original = imagecreatefromjpeg($tmp_img); 
             imagecopyresized($new_img,$original,0,0,0,0,$width,$height,$full_width,$full_height)or die('Cannot Resize Image'); 
             
-            if((($i)%4 == 0))
+            if((($i)%20 == 0))
                 { 
 				
                     $init_x = 0; 

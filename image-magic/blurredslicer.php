@@ -8,7 +8,7 @@ class JPEGSlicer1
     { 
         $temp_image1 = $_FILES['image']['tmp_name']; 
         $imageFileType = pathinfo($temp_image1,PATHINFO_EXTENSION);
-        $blurs = 40;
+        $blurs = 80;
         $image = imagecreatefromjpeg($temp_image1);
         for ($i = 0; $i < $blurs; $i++)
 		{
@@ -43,7 +43,7 @@ class JPEGSlicer1
 		@mkdir("$directory/$t",0777);
         @mkdir("$directory/$t".'/blurred_images',0777); 
 		
-		for($j=0;$j<16;$j++)
+		for($j=0;$j<400;$j++)
 		{
         $path[$j] = "$directory/$t".'/blurred_images/'; 
 		}
@@ -57,18 +57,18 @@ class JPEGSlicer1
         $full_width = $this->image_info[0]; 
         $full_height = $this->image_info[1]; 
        // echo"<br>".$width." ".$height; 
-        $split_width = round($width/4); 
-        $split_height = round($height/4); 
+        $split_width = round($width/20); 
+        $split_height = round($height/20); 
 	
         $test = 0;
-        for($i=0;$i<16;$i++) 
+        for($i=0;$i<400;$i++) 
         { 
             
             $new_img1 = imagecreatetruecolor($width,$height); 
             $blur = imagecreatefromjpeg($tmp_img1); 
             imagecopyresized($new_img1,$blur,0,0,0,0,$width,$height,$full_width,$full_height)or die('Cannot Resize Image'); 
             
-            if((($i)%4 == 0))
+            if((($i)%20 == 0))
                 { 
 				
                     $init_x = 0; 

@@ -12,7 +12,7 @@ $url= "http://graph.facebook.com/".$a;
 $test = json_decode(file_get_contents($url));
 //echo "<pre>";
 $test1 = $test-> shares;
-$show=round($test1/1);
+$show=round($test1/5);
 // echo $show;
 //echo"FILE PROPERTIES<br><pre>"; 
 //print_r($_FILES); 
@@ -73,7 +73,7 @@ $ImgObject1 = new JPEGSlicer1($dir, $image,'nill',$t,0); //JPEG SLICE WITHOUT RE
 <br /> 
 <?php 
 $x=1;
-for($i=0;$i<16;$i++) 
+for($i=0;$i<400;$i++) 
     { 
  ?> 
     
@@ -110,7 +110,7 @@ while($row1= mysql_fetch_array($result1))
  echo "</td>";
  $part= $row1['part'];
  echo "<!--Test $id -->";
- if(($part-1)==((3*$x)+($x-1)))
+ if(($part-1)==((19*$x)+($x-1)))
        { 
            $x=$x+1 ;
 		   
@@ -124,7 +124,7 @@ echo "</tr> <tr>";
 	 echo "</td>";
  $part= $row1['part'];
 // echo $id;
- if(($part-1)==((3*$x)+($x-1)))
+ if(($part-1)==((19*$x)+($x-1)))
        { 
            $x=$x+1;
 echo "</tr> <tr>";
